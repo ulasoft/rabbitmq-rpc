@@ -1,0 +1,22 @@
+{
+    "name": "ulasoft/rabbit-rpc",
+    "require": {
+        "php-amqplib/php-amqplib": ">=3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Usoft\\RabbitRpc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ulasoft",
+            "email": "ulasoft@mail.ru"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": "Usoft\\RabbitRpc\\Providers\\RabbitMQRpcProvider"
+        }
+    }
+}
