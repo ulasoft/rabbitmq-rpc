@@ -106,7 +106,7 @@ abstract class ConsumerRpc
      */
     public function run()
     {
-        $connection = new AMQPStreamConnection(env('RABBITMQ_HOST'), env('RABBITMQ_PORT'), env('RABBITMQ_USER'), env('RABBITMQ_PASSWORD'));
+        $connection = new AMQPStreamConnection(env('RABBITMQ_HOST_RPC'), env('RABBITMQ_PORT_RPC'), env('RABBITMQ_USER_RPC'), env('RABBITMQ_PASSWORD_RPC'));
 
         $channel = $connection->channel();
 
