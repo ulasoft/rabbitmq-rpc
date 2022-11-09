@@ -21,7 +21,7 @@ class ProducerRpc
         $this->setQueueName($queueName);
         $this->withoutWaiting = false;
 
-        $this->connection = new AMQPStreamConnection(env('RABBITMQ_HOST'), env('RABBITMQ_PORT'), env('RABBITMQ_USER'), env('RABBITMQ_PASSWORD'));
+        $this->connection = new AMQPStreamConnection(env('RABBITMQ_HOST_RPC'), env('RABBITMQ_PORT_RPC'), env('RABBITMQ_USER_RPC'), env('RABBITMQ_PASSWORD_RPC'));
         $this->channel = $this->connection->channel();
         list($this->callback_queue, ,) = $this->channel->queue_declare(
             "",
